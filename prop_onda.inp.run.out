@@ -1,0 +1,13 @@
+           #Run   Obj-function     Iterations     After time   Reqd. Eval's             x1
+              1       0.0000001       2.141021            800          0.750
+              2       0.0000000       0.104955             25          0.750
+              #  #obj-function    #Iterations          #Time   #Evaluations
+         # mean           best          worst        std-dev       ave/best     worst/best
+#       0.000000       0.000000       0.000000       0.000000       0.000000       0.000000
+#              #  #obj-function    #Iterations          #Time   #Evaluations
+         # mean           best          worst        std-dev       ave/best     worst/best
+#       0.000000       0.000000       0.000000       0.000000       0.000000       0.000000
+#       0.50000012       1.581139      -0.500000       1.000000
+#       1.122988       0.104955       2.141021       1.439716       9.699709      19.399419
+#     412.50000025800     548.007755      15.500000      31.000000
+#

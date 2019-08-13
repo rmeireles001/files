@@ -1,0 +1,68 @@
+
+
+\documentclass{article} 
+ \usepackage[dvips]{graphics}\usepackage{graphicx} 
+ \begin{document} 
+Input file name is   prop_onda.inp
+
+\begin{figure}[!htp]
+ \centering \scalebox{1.0}{\includegraphics{prop_onda.inp.constructiongraph.eps}} 
+ \caption{Convergence of objective function for prop_onda.inp.} \label{conv-ofn} \end{figure}
+ \input{prop_onda.inp.best.tex} \input{prop_onda.inp.var.tex}\begin{figure}[!htp]
+ \centering \scalebox{1.0}{\includegraphics{prop_onda.inp.obj.eps}} 
+ \caption{Convergence of objective function for prop_onda.inp.} \label{conv-ofn} \end{figure}
+\begin{figure}[!htp]
+ \centering \scalebox{1.0}{\includegraphics{prop_onda.inp.var.eps}} 
+ \caption{Convergence of variable values for prop_onda.inp.} \label{conv-var} \end{figure}
+\begin{figure}[!htp]
+ \centering \scalebox{1.0}{\includegraphics{prop_onda.inp.dev.eps}} 
+ \caption{Convergence history of run time statistics for prop_onda.inp.} \label{conv-run} \end{figure}
+\begin{figure}[!htp]
+ \centering \scalebox{1.0}{\includegraphics{prop_onda.inp.time.eps}} 
+ \caption{Time required to find best solution for 2 runs with  prop_onda.inp.} \label{time} \end{figure}
+\begin{table}[!hp] \label{allresults}
+  \begin{center}
+ \caption{Results obtained for  2 runs with prop_onda.inp }
+ \begin{tabular}{||c||c||c||c||c||c||} \hline \hline 
+          \#Run&   Obj-function&     Iterations&     After time&   Reqd. Eval's&             x1\\ \hline \hline
+              1&       0.000000&1&       2.141021&800&          0.750\\ \hline 
+              2&       0.000000&0&       0.104955&25&          0.750\\ \hline 
+           mean&       0.000000&       0.500000&       1.122988&     412.500000&\\ \hline 
+           best&       0.000000&1&       0.104955&25&\\ \hline 
+          worst&       0.000000&2&       2.141021&800&\\ \hline 
+        std-dev&       0.000000&       1.581139&       1.439716&     548.007755&\\ \hline 
+       ave/best&       0.000000&      -0.500000&       9.699709&      15.500000&\\ \hline 
+     worst/best&       0.000000&       1.000000&      19.399419&      31.000000&\\ \hline 
+\hline 
+ \end{tabular}
+ \end{center}
+ \end{table}
+
+
+\begin{table}[!hp] \label{stats}
+  \begin{center}
+ \caption{Statistics for 2 runs with prop_onda.inp}
+ \begin{tabular}{||c||c||c||c||c||c||c||}
+ \hline \hline 
+               &           mean&           best&          worst&        std-dev&       ave/best&     worst/best\\ \hline 
+   obj-function&       0.000000&       0.000000&       0.000000&       0.000000&       0.000000&       0.000000\\ \hline 
+     Iterations&       0.500000&1&2&       1.581139&      -0.500000&       1.000000\\ \hline 
+           Time&       1.122988&       0.104955&       2.141021&       1.439716&       9.699709&      19.399419\\ \hline 
+    Evaluations&     412.500000&25&800&     548.007755&      15.500000&      31.000000 \\ \hline 
+
+
+
+\hline 
+ \end{tabular}
+ \end{center}
+ \end{table}
+ \begin{figure}[!htp]
+ \centering \scalebox{1.0}{\includegraphics{prop_onda.inp.run.eps}} 
+ \caption{Values of Best Objective function found for 2 runs} \label{obj-run} \end{figure}
+\begin{figure}[!htp]
+ \centering \scalebox{1.0}{\includegraphics{prop_onda.inp.eval.eps}} 
+ \caption{Evaluations requred to find the best solution for each of  2 runs.} \label{eval-run}\end{figure}
+\begin{figure}[!htp]
+ \centering \scalebox{1.0}{\includegraphics{prop_onda.inp.iter.eps}} 
+ \caption{Iterations requred to find the best solution for each of 2 runs.} \label{iter-run} \end{figure}
+ \end{document}
