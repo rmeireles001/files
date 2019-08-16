@@ -66,14 +66,19 @@ int main(int argc, char *argv[])
 	n=pfim;
 	fdimension=n;
 	laco=3;
-
+	FILE *resultados = fopen("areas.txt", "w");
+	fprintf(resultados, "Posição (mm)\t\tÁrea(mm²)\n");
+	fclose(resultados);
 	while(laco<=final){
 		for(i=0; i<=n; i++)
 			config[i] = A[i]/A[1];
 		ant_colony();
+		resultados = fopen("areas.txt", "a");
 		for(i=0, k=pinicio;k<=pfim; k++, i++){
 			config[k]=bestval.var[i];
+			fprintf(resultados, "%d\t\t%.15e\n",posicao[k], config[k]);
 		}
+		fclose(resultados);
 		for(i=pinicio; i<=pfim; i++)
 			A[i]=config[i]*300;
 		pinicio+=np;
@@ -82,11 +87,11 @@ int main(int argc, char *argv[])
 		fdimension=n;
 		laco = pinicio;
 	}
-	FILE *resultados = fopen("areas.txt", "w");
+	/*FILE *resultados = fopen("areas.txt", "w");
 	fprintf(resultados, "Posição (mm)\t\tÁrea(mm²)\n");
 	for(i=pi; i<n; i++){
 		fprintf(resultados, "%d\t\t%.15e\n", posicao[i], config[i]);
 	}
-	fclose(resultados);
+	fclose(resultados);*/
 	return 0;
 }
