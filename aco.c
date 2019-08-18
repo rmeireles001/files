@@ -47,7 +47,7 @@ void ant_colony()
 int main(int argc, char *argv[])
 {
 	printf("oi\n");
-	int pi, final, laco, i, k;
+	int pi, final, laco, i, k, j;
 	inpfname = argv[1];
 	for(i=0;i<500;i++)
         G[i]=0.0;
@@ -66,19 +66,30 @@ int main(int argc, char *argv[])
 	n=pfim;
 	fdimension=n;
 	laco=3;
-	FILE *resultados = fopen("areas.txt", "w");
+	/*FILE *resultados = fopen("areas.txt", "w");
 	fprintf(resultados, "Posição (mm)\t\tÁrea(mm²)\n");
-	fclose(resultados);
+	fclose(resultados);*/
+	FILE *test = fopen("entrada1.txt", "r");
+	for(j=0; j<=337; j++){
+		fscanf(test, "%lf", &config[j]);
+	}
+	fclose(test);
+	pinicio=330;
+	pfim = pinicio-1+np;
+	n=pfim;
+	fdimension=n;
+	laco = pinicio;
 	while(laco<=final){
 		for(i=0; i<=n; i++)
 			config[i] = A[i]/A[1];
 		ant_colony();
-		resultados = fopen("areas.txt", "a");
+		//resultados = fopen("areas.txt", "a");
 		for(i=0, k=pinicio;k<=pfim; k++, i++){
 			config[k]=bestval.var[i];
-			fprintf(resultados, "%d\t\t%.15e\n",posicao[k], config[k]);
+			//fprintf(resultados, "%d\t\t%.15e\n",posicao[k], config[k]);
 		}
-		fclose(resultados);
+		//fclose(resultados);
+		printf("-----------------------\n%d %d\n--------------------\n", laco, final);
 		for(i=pinicio; i<=pfim; i++)
 			A[i]=config[i]*300;
 		pinicio+=np;
